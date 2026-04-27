@@ -1,0 +1,102 @@
+{
+  "version": 8,
+  "name": "NZ Attractions Combined",
+  "metadata": {},
+  "sources": {
+    "basemap": {
+      "type": "vector",
+      "url": "mapbox://mapbox.mapbox-streets-v8"
+    },
+    "nz-attractions": {
+      "type": "vector",
+      "url": "mapbox://lukeponga.nz_attractions_combined"
+    }
+  },
+  "sprite": "mapbox://sprites/mapbox/bright-v9",
+  "glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "basemap",
+      "type": "background",
+      "paint": {
+        "background-color": "#E5E7EB"
+      }
+    },
+    {
+      "id": "nz-attractions-circles",
+      "type": "circle",
+      "source": "nz-attractions",
+      "source-layer": "nz_attractions_combined",
+      "paint": {
+        "circle-radius": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          4,
+          4,
+          8,
+          6,
+          12,
+          10
+        ],
+        "circle-color": [
+          "match",
+          ["get", "category"],
+          "free-experience",
+          "#0EA5E9",
+          "bucket-list",
+          "#F59E0B",
+          "#6B7280"
+        ],
+        "circle-stroke-width": 1,
+        "circle-stroke-color": "#0F172A"
+      }
+    },
+    {
+      "id": "nz-attractions-icons",
+      "type": "symbol",
+      "source": "nz-attractions",
+      "source-layer": "nz_attractions_combined",
+      "layout": {
+        "icon-image": [
+          "match",
+          ["get", "category"],
+          "free-experience",
+          "icon-free",
+          "bucket-list",
+          "icon-bucket",
+          "icon-default"
+        ],
+        "icon-size": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          4,
+          0.5,
+          8,
+          0.7,
+          12,
+          1
+        ],
+        "icon-allow-overlap": true,
+        "text-field": ["get", "name"],
+        "text-size": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          6,
+          10,
+          12,
+          14
+        ],
+        "text-offset": [0, 1.2],
+        "text-anchor": "top"
+      },
+      "paint": {
+        "text-color": "#0F172A",
+        "text-halo-color": "white",
+        "text-halo-width": 1.2
+      }
+    }
+  ]
+}
