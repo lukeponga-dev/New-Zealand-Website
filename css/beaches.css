@@ -1,0 +1,85 @@
+.coast-hero {
+  margin-top: 70px;
+  min-height: 45vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url('../images/coromandel.jpg') center / cover no-repeat;
+  color: #fff;
+}
+
+.coast-hero__inner {
+  max-width: 760px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.coast-content {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+.intro-card,
+.tips-card,
+.attribution-card {
+  background: #f8f9fa;
+  border-left: 4px solid #28a745;
+  border-radius: 8px;
+  padding: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.beach-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.beach-panel {
+  background: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.beach-panel ul {
+  margin-bottom: 0;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.tips-grid p {
+  margin: 0;
+  background: #fff;
+  border-radius: 6px;
+  padding: 0.75rem;
+  border: 1px solid #e9ecef;
+}
+
+@media (max-width: 767px) {
+  .beach-grid,
+  .tips-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .coast-hero {
+    min-height: 38vh;
+  }
+
+  .coast-hero h1 {
+    font-size: 1.8rem;
+  }
+}
