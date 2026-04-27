@@ -767,3 +767,41 @@ iframe {
   border: 3px solid black;
   margin: 20px auto;
 }
+
+/* THINGS TO DO PAGE */
+.things-hero {
+  min-height: 55vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../images/home-cover.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.destination-chip {
+  background: #f4f7fb;
+  border: 1px solid #d7e0ea;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+  font-weight: 600;
+  min-height: 100%;
+}
+
+.holiday-types {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+  list-style: none;
+  padding-left: 0;
+}
+
+.holiday-types li {
+  background: #f8f8f8;
+  border-left: 4px solid #205493;
+  padding: 10px 12px;
+}
+
+.last-updated {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #4d4d4d;
+}
