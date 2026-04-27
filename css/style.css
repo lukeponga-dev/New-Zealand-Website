@@ -623,6 +623,7 @@ iframe {
 
 .home-v2 #attractions .card-img-top,
 .home-v2 #attractions .card img {
+  width: 100%;
   height: 220px;
   object-fit: cover;
 }
