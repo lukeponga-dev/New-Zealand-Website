@@ -689,3 +689,58 @@ iframe {
     grid-template-columns: 1fr;
   }
 }
+ 
+/* EVENTS PAGE RESPONSIVE LAYOUT */
+.home-v2 #events .events-intro {
+  margin-bottom: 1.5rem;
+}
+
+.home-v2 #events .events-intro p {
+  max-width: 780px;
+  margin: 0 auto;
+  color: #365269;
+}
+
+.home-v2 #events .events-grid {
+  margin-top: 0.5rem;
+}
+
+.home-v2 #events .event-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 10px 24px rgba(9, 33, 54, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.home-v2 #events .event-date {
+  display: inline-block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #0b5ea8;
+  margin-bottom: 0.5rem;
+}
+
+.home-v2 #events .event-card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.home-v2 #events .event-location {
+  color: #32506a;
+  margin-bottom: 1rem;
+}
+
+.home-v2 #events .event-card .btn-dark {
+  margin-top: auto;
+  border-radius: 999px;
+  background: #0b5ea8;
+  border-color: #0b5ea8;
+}
+
+.home-v2 #events .event-card .btn-dark:hover {
+  background: #084b85;
+  border-color: #084b85;
+}
