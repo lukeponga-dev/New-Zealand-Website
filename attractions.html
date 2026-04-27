@@ -264,45 +264,117 @@
 
         mapboxgl.accessToken = mapboxToken;
 
-        const attractions = [
-          { name: "Abel Tasman National Park", coords: [172.9, -40.8333] },
-          { name: "Waitomo Glowworm Caves", coords: [175.1036, -38.2608] },
-          { name: "Rainbow's End", coords: [174.8840, -36.9940] },
-          { name: "Shotover Canyon Swing", coords: [168.6611, -45.0306] },
-          { name: "Huka Falls", coords: [176.0897, -38.6495] },
-          { name: "Air Force Museum of New Zealand", coords: [172.5477, -43.5466] },
-          { name: "Te Papa Tongarewa", coords: [174.7821, -41.2905] },
-          { name: "Marokopa Falls", coords: [174.8518, -38.2615] },
-          { name: "Splash Planet", coords: [176.8636, -39.6440] },
-          { name: "SEA LIFE Kelly Tarlton's Aquarium", coords: [174.8172, -36.8458] }
-        ];
+        const nzAttractionsStyle = {
+          version: 8,
+          name: "NZ Attractions Combined",
+          metadata: {},
+          sources: {
+            basemap: {
+              type: "vector",
+              url: "mapbox://mapbox.mapbox-streets-v8"
+            },
+            "nz-attractions": {
+              type: "vector",
+              url: "mapbox://lukeponga.nz_attractions_combined"
+            }
+          },
+          sprite: "mapbox://sprites/mapbox/bright-v9",
+          glyphs: "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
+          layers: [
+            {
+              id: "basemap",
+              type: "background",
+              paint: {
+                "background-color": "#E5E7EB"
+              }
+            },
+            {
+              id: "nz-attractions-circles",
+              type: "circle",
+              source: "nz-attractions",
+              "source-layer": "nz_attractions_combined",
+              paint: {
+                "circle-radius": [
+                  "interpolate",
+                  ["linear"],
+                  ["zoom"],
+                  4,
+                  4,
+                  8,
+                  6,
+                  12,
+                  10
+                ],
+                "circle-color": [
+                  "match",
+                  ["get", "category"],
+                  "free-experience",
+                  "#0EA5E9",
+                  "bucket-list",
+                  "#F59E0B",
+                  "#6B7280"
+                ],
+                "circle-stroke-width": 1,
+                "circle-stroke-color": "#0F172A"
+              }
+            },
+            {
+              id: "nz-attractions-icons",
+              type: "symbol",
+              source: "nz-attractions",
+              "source-layer": "nz_attractions_combined",
+              layout: {
+                "icon-image": [
+                  "match",
+                  ["get", "category"],
+                  "free-experience",
+                  "icon-free",
+                  "bucket-list",
+                  "icon-bucket",
+                  "icon-default"
+                ],
+                "icon-size": [
+                  "interpolate",
+                  ["linear"],
+                  ["zoom"],
+                  4,
+                  0.5,
+                  8,
+                  0.7,
+                  12,
+                  1
+                ],
+                "icon-allow-overlap": true,
+                "text-field": ["get", "name"],
+                "text-size": [
+                  "interpolate",
+                  ["linear"],
+                  ["zoom"],
+                  6,
+                  10,
+                  12,
+                  14
+                ],
+                "text-offset": [0, 1.2],
+                "text-anchor": "top"
+              },
+              paint: {
+                "text-color": "#0F172A",
+                "text-halo-color": "white",
+                "text-halo-width": 1.2
+              }
+            }
+          ]
+        };
 
         const map = new mapboxgl.Map({
           container: "map",
-          style: "mapbox://styles/mapbox/outdoors-v12",
+          style: nzAttractionsStyle,
           center: [173.5, -41],
           zoom: 4.6
         });
 
         map.addControl(new mapboxgl.NavigationControl(), "top-right");
-
-        map.on("load", () => {
-          const bounds = new mapboxgl.LngLatBounds();
-
-          attractions.forEach((place) => {
-            bounds.extend(place.coords);
-
-            new mapboxgl.Marker({ color: "#000" })
-              .setLngLat(place.coords)
-              .setPopup(
-                new mapboxgl.Popup({ offset: 20 })
-                  .setHTML(`<strong>${place.name}</strong>`)
-              )
-              .addTo(map);
-          });
-
-          map.fitBounds(bounds, { padding: 60, maxZoom: 10 });
-        });
       })();
     </script>
 </body>
