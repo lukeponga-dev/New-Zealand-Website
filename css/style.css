@@ -536,3 +536,156 @@ iframe {
     min-height: 65vh;
   }
 }
+
+/* GLOBAL TOURISM REFRESH (all inner pages) */
+.home-v2 {
+  font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.home-v2 main,
+.home-v2 #attractions,
+.home-v2 #events,
+.home-v2 #history,
+.home-v2 #contact,
+.home-v2 #locations {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.home-v2 .home-navbar {
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 6px 20px rgba(2, 20, 35, 0.2);
+}
+
+.home-v2 .home-navbar .nav-link {
+  border-radius: 999px;
+  padding: 0.4rem 0.8rem;
+}
+
+.home-v2 .home-navbar .nav-item.active .nav-link,
+.home-v2 .home-navbar .nav-link:hover {
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+}
+
+.home-v2 .jumbotron {
+  min-height: 52vh;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+}
+
+.home-v2 .jumbotron-text,
+.home-v2 .jumbotron-text p {
+  display: block;
+  position: relative;
+  padding: 6.5rem 2rem 2rem;
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.home-v2 .jumbotron-text h1 {
+  color: #fff;
+  text-shadow: 0 6px 28px rgba(0, 0, 0, 0.45);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.home-v2 .breadcrumb {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 18px rgba(10, 28, 44, 0.08);
+}
+
+.home-v2 #attractions .card {
+  width: 100% !important;
+  height: 100%;
+  border: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(9, 33, 54, 0.1);
+}
+
+.home-v2 #attractions .card-img-top,
+.home-v2 #attractions .card img {
+  height: 220px;
+  object-fit: cover;
+}
+
+.home-v2 h2.card-title {
+  border-bottom: 0;
+  font-size: 1.35rem;
+}
+
+.home-v2 p.card-text {
+  color: #22384a;
+}
+
+.home-v2 #attractions .btn-dark {
+  border-radius: 999px;
+  padding-inline: 1rem;
+  background: #0b5ea8;
+  border-color: #0b5ea8;
+}
+
+.home-v2 #events table {
+  width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(9, 33, 54, 0.1);
+}
+
+.home-v2 #events th {
+  background: #0d3a63;
+  color: #fff;
+  padding: 0.85rem;
+}
+
+.home-v2 #events td {
+  background: #fff;
+  padding: 0.75rem;
+  border-bottom: 1px solid #e8edf2;
+}
+
+.home-v2 #history .row,
+.home-v2 #contact .row {
+  background: #fff;
+  border-radius: 14px;
+  padding: 1.25rem;
+  box-shadow: 0 10px 24px rgba(9, 33, 54, 0.08);
+}
+
+.home-v2 #contact form {
+  margin-top: 0;
+}
+
+.home-v2 #contact .form-control {
+  background: #f4f8fc;
+  border: 1px solid #d6e2ee;
+  border-radius: 8px;
+  color: #123;
+}
+
+.home-v2 #contact form .submit {
+  background: #0b5ea8;
+  color: #fff;
+  border-radius: 999px;
+  letter-spacing: 0;
+}
+
+.home-v2 #contact form .submit:hover {
+  background: #084b85;
+}
+
+@media (max-width: 991px) {
+  .home-v2 .jumbotron-text,
+  .home-v2 .jumbotron-text p {
+    padding-top: 7rem;
+    text-align: left;
+  }
+
+  .home-v2 .search-grid {
+    grid-template-columns: 1fr;
+  }
+}
