@@ -2,30 +2,21 @@
 <html lang="en">
 
 <head>
-  <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>AOTEAROA | HOME</title>
 
-  <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
-
-  <!--[if it IE 9]->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>
 
 <body itemscope itemtype="https://schema.org/WebPage">
-  <!--HEADER AND NAVBAR-->
   <header>
-    <!--NAVBAR-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <a class="navbar-brand" href="index.html"><img src="images/1280px-NZ_fern_flag.png" width="100" height="45"
           alt="New Zealand fern logo"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -44,91 +35,103 @@
         </ul>
       </div>
     </nav>
-    <!--JUMBOTRON-->
-    <div class="jumbotron jumbotron-image-home">
+
+    <div class="jumbotron jumbotron-image-home mb-0">
       <div class="jumbotron-text">
-        <h1>Welcome, we are kiwis</h1>
-        <p>Land of The Long White Cloud</p>
+        <h1>Find your 100% in Aotearoa</h1>
+        <p>Adventure, culture, coastlines, and alpine landscapes in one unforgettable destination.</p>
+        <a class="btn btn-outline-light btn-lg mt-3" href="https://www.newzealand.com/us/" target="_blank"
+          rel="noopener noreferrer">Visit Official Tourism Site</a>
       </div>
     </div>
   </header>
-  <!--HOME PAGE INTRODUCTION-->
-  <div class="container" id="home">
-    <h3 class="display-4 lead">What brings you here?</h3>
-    <p>Are you interested in our history and how we became the kiwis? maybe you're here to look for a
-      family trip? Or you're trying to find an event that interest you? Well this is the place you want to be.
-      Its all easy to navigate and read so don't worry about any annoying or frustrating links.</p>
-    <p>
-      our New Zealand site has great information, from NZ history and how NZ became to beautiful locations all around
-      New Zealand.
-      We even took the time researching New Zealands main attractions and up-coming events just to make your life a
-      little easier if you have any questions
-      dont hesitate to send them through just go to our <a href="contact.html">contact page</a>, Enjoy.</p>
-    <!--HOME PAGE FACTS ABOUT NEW ZEALAND-->
-    <h4>Facts about New Zealand</h4>
-    <p>#1 New Zealand’s name in Maori is Aotearoa, which means ‘land of the long white cloud.’</p>
-    <p>#2 In 1990, New Zealand became the first country in the modern world to appoint an <a
-        href="http://www.stuff.co.nz/the-press/8087658/Wizard-reminisces-as-he-turns-80">Official National Wizard.</a>
-    </p>
-    <p>#3 To become a New Zealand citizen, you must swear an oath of loyalty to Queen Elizabeth.</p>
-    <p>#4 New Zealand is one of the world’s least populated countries with 4.794 million</p>
-  </div>
 
-  <div class="container" id="showcase">
-    <!--HOME PAGE CAROUSEL-->
-    <h4>Attractive photos of our land</h4>
-    <div id="slider" class="carousel slide" data-ride="carousel">
-      <ul class="carousel-indicators">
-        <li data-target="#slider" data-slide-to="0" class="active"></li>
-        <li data-target="#slider" data-slide-to="1"></li>
-        <li data-target="#slider" data-slide-to="2"></li>
-        <li data-target="#slider" data-slide-to="3"></li>
-        <li data-target="#slider" data-slide-to="4"></li>
-      </ul>
-      <!--CAROUSEL IMAGES-->
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img class="img" src="./images/silver-fern.jpg" alt="carousel img" width="100%" height="450">
-          <div class="carousel-caption">
-            <h3>New Zealands Silver Fern</h3>
-          </div>
+  <main>
+    <section class="container py-5" id="home">
+      <h2 class="section-title">Plan your trip with confidence</h2>
+      <p>
+        This site gives you a practical starting point for exploring New Zealand: where to go, what to do, and how to
+        build an itinerary around your travel style.
+      </p>
+      <p>
+        For official travel guidance, booking ideas, and up-to-date visitor resources for United States travellers,
+        use the Tourism New Zealand portal linked above.
+      </p>
+    </section>
+
+    <section class="container pb-4">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <article class="home-card h-100">
+            <h3>Places to visit</h3>
+            <p>Explore iconic regions from Auckland and Queenstown to geothermal valleys, lakes, and coastal gems.</p>
+            <a href="beaches-coast.html">Explore beaches & coast</a>
+          </article>
         </div>
-        <div class="carousel-item">
-          <img class="img" src="./images/nz-rainforest.jpg" alt="carousel img" width="100%" height="450">
-          <div class="carousel-caption">
-            <h3>Our beautiful green rainforest</h3>
-          </div>
+        <div class="col-md-4 mb-4">
+          <article class="home-card h-100">
+            <h3>Things to do</h3>
+            <p>Find hiking, Māori cultural experiences, food and wine trails, and outdoor adventures for every season.</p>
+            <a href="attractions.html">Browse attractions</a>
+          </article>
         </div>
-        <div class="carousel-item">
-          <img class="img" src="./images/lake-taupo.jpg" alt="carousel img" width="100%" height="450">
-          <div class="carousel-caption">
-            <h3>Lake Taupos beautiful sunset</h3>
-          </div>
+        <div class="col-md-4 mb-4">
+          <article class="home-card h-100">
+            <h3>Plan your trip</h3>
+            <p>Learn when to visit, how to travel between regions, and what to prepare before arriving in New Zealand.</p>
+            <a href="events.html">Check upcoming events</a>
+          </article>
         </div>
-        <div class="carousel-item">
-          <img class="img" src="./images/coromandel.jpg" alt="carousel img" width="100%" height="450">
-          <div class="carousel-caption">
-            <h3>Coromandels beach</h3>
-          </div>
-        </div>
-        <!--CAROUSEL NEXT ARROWS-->
-        <a class="carousel-control-prev" href="#slider" data-slide="prev"><span
-            class="carousel-control-prev-icon"></span></a>
-        <a class="carousel-control-next" href="#slider" data-slide="next"><span
-            class="carousel-control-next-icon"></span></a>
       </div>
+    </section>
+
+    <section class="container" id="showcase">
+      <h2 class="section-title text-center">Inspiration from around New Zealand</h2>
+      <div id="slider" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+          <li data-target="#slider" data-slide-to="0" class="active"></li>
+          <li data-target="#slider" data-slide-to="1"></li>
+          <li data-target="#slider" data-slide-to="2"></li>
+          <li data-target="#slider" data-slide-to="3"></li>
+        </ul>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="img" src="./images/silver-fern.jpg" alt="Silver fern in New Zealand" width="100%" height="450">
+            <div class="carousel-caption">
+              <h3>Native symbols and forests</h3>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="img" src="./images/nz-rainforest.jpg" alt="Rainforest in New Zealand" width="100%" height="450">
+            <div class="carousel-caption">
+              <h3>Rainforest trails and wild nature</h3>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="img" src="./images/lake-taupo.jpg" alt="Lake Taupo at sunset" width="100%" height="450">
+            <div class="carousel-caption">
+              <h3>Lake landscapes and volcanoes</h3>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="img" src="./images/coromandel.jpg" alt="Coromandel coast" width="100%" height="450">
+            <div class="carousel-caption">
+              <h3>Golden beaches and coastlines</h3>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#slider" data-slide="prev"><span class="carousel-control-prev-icon"></span></a>
+          <a class="carousel-control-next" href="#slider" data-slide="next"><span class="carousel-control-next-icon"></span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer font-small bg-dark mt-5">
+    <div class="footer-copyright text-center py-3">© 2026 Aotearoa Travel Guide ·
+      <a href="https://www.newzealand.com/us/" target="_blank" rel="noopener noreferrer">Tourism New Zealand (US)</a>
     </div>
-  </div>
-  <!-- Footer -->
-  <footer class="page-footer font-small bg-dark">
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2018 Copyright:
-      <a href="https://www.facebook.com/luke.gilchrist.35">LUKE PONGA</a>
-    </div>
-    <!-- Copyright -->
   </footer>
 
-  <!-- jQuery first, then Tether, then Bootstrap JS. -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
   </script>

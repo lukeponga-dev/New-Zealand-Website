@@ -81,15 +81,23 @@ h3 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/contact-cover.jpg");
 }
 
-.jumbotron-text,
-.jumbotron-text p {
-  font-size: 28px;
-  font-weight: 700;
-  display: contents;
-  text-align: left;
+.jumbotron-text {
+  max-width: 760px;
   position: absolute;
-  color: white;
-  padding-top: 20px;
+  top: 22%;
+  left: 8%;
+  color: #fff;
+}
+
+.jumbotron-text h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.jumbotron-text p {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 0;
 }
 
 /* NAVBAR + HEADER STYLE END */
@@ -346,4 +354,25 @@ iframe {
   td:nth-of-type(5):before {
     content: "Link";
   }
+}
+.section-title {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.home-card {
+  border: 1px solid #d8d8d8;
+  border-radius: 10px;
+  padding: 24px 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+}
+
+.home-card h3 {
+  text-align: left;
+  font-size: 25px;
+}
+
+.home-card a {
+  font-weight: 700;
 }
