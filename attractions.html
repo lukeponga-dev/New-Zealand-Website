@@ -246,57 +246,60 @@
     <script src="scripts/mapbox-config.js"></script>
 
     <script>
-      const mapboxToken = window.MAPBOX_ACCESS_TOKEN;
+      (function loadAttractionsMap() {
+        const mapboxToken = window.MAPBOX_ACCESS_TOKEN;
+        const mapElement = document.getElementById("map");
 
-      if (!mapboxToken) {
-        console.error("Mapbox token missing. Add scripts/mapbox-config.js from scripts/mapbox-config.example.js.");
-      }
+        if (!mapboxToken) {
+          console.error("Mapbox token missing. Add scripts/mapbox-config.js from scripts/mapbox-config.example.js.");
+          if (mapElement) {
+            mapElement.innerHTML = "<p class='text-center p-4 mb-0'>Map unavailable: add a Mapbox token in <code>scripts/mapbox-config.js</code>.</p>";
+          }
+          return;
+        }
 
-      mapboxgl.accessToken = mapboxToken || "";
+        mapboxgl.accessToken = mapboxToken;
 
-      const attractions = [
-        { name: "Abel Tasman National Park", coords: [172.9, -40.8333] },
-        { name: "Waitomo Glowworm Caves", coords: [175.1036, -38.2608] },
-        { name: "Rainbow's End", coords: [174.8840, -36.9940] },
-        { name: "Shotover Canyon Swing", coords: [168.6611, -45.0306] },
-        { name: "Huka Falls", coords: [176.0897, -38.6495] },
-        { name: "Air Force Museum of New Zealand", coords: [172.5477, -43.5466] },
-        { name: "Te Papa Tongarewa", coords: [174.7821, -41.2905] },
-        { name: "Marokopa Falls", coords: [174.8518, -38.2615] },
-        { name: "Splash Planet", coords: [176.8636, -39.6440] },
-        { name: "SEA LIFE Kelly Tarlton's Aquarium", coords: [174.8172, -36.8458] }
-      ];
+        const attractions = [
+          { name: "Abel Tasman National Park", coords: [172.9, -40.8333] },
+          { name: "Waitomo Glowworm Caves", coords: [175.1036, -38.2608] },
+          { name: "Rainbow's End", coords: [174.8840, -36.9940] },
+          { name: "Shotover Canyon Swing", coords: [168.6611, -45.0306] },
+          { name: "Huka Falls", coords: [176.0897, -38.6495] },
+          { name: "Air Force Museum of New Zealand", coords: [172.5477, -43.5466] },
+          { name: "Te Papa Tongarewa", coords: [174.7821, -41.2905] },
+          { name: "Marokopa Falls", coords: [174.8518, -38.2615] },
+          { name: "Splash Planet", coords: [176.8636, -39.6440] },
+          { name: "SEA LIFE Kelly Tarlton's Aquarium", coords: [174.8172, -36.8458] }
+        ];
 
-      if (!mapboxToken) {
-        return;
-      }
-
-      const map = new mapboxgl.Map({
-        container: "map",
-        style: "mapbox://styles/mapbox/outdoors-v12",
-        center: [173.5, -41],
-        zoom: 4.6
-      });
-
-      map.addControl(new mapboxgl.NavigationControl(), "top-right");
-
-      map.on("load", () => {
-        const bounds = new mapboxgl.LngLatBounds();
-
-        attractions.forEach((place) => {
-          bounds.extend(place.coords);
-
-          new mapboxgl.Marker({ color: "#000" })
-            .setLngLat(place.coords)
-            .setPopup(
-              new mapboxgl.Popup({ offset: 20 })
-                .setHTML(`<strong>${place.name}</strong>`)
-            )
-            .addTo(map);
+        const map = new mapboxgl.Map({
+          container: "map",
+          style: "mapbox://styles/mapbox/outdoors-v12",
+          center: [173.5, -41],
+          zoom: 4.6
         });
 
-        map.fitBounds(bounds, { padding: 60, maxZoom: 10 });
-      });
+        map.addControl(new mapboxgl.NavigationControl(), "top-right");
+
+        map.on("load", () => {
+          const bounds = new mapboxgl.LngLatBounds();
+
+          attractions.forEach((place) => {
+            bounds.extend(place.coords);
+
+            new mapboxgl.Marker({ color: "#000" })
+              .setLngLat(place.coords)
+              .setPopup(
+                new mapboxgl.Popup({ offset: 20 })
+                  .setHTML(`<strong>${place.name}</strong>`)
+              )
+              .addTo(map);
+          });
+
+          map.fitBounds(bounds, { padding: 60, maxZoom: 10 });
+        });
+      })();
     </script>
 </body>
 
