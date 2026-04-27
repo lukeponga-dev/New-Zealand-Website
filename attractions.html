@@ -243,17 +243,21 @@
         rel="stylesheet"
     />
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
-    <script src="scripts/mapbox-config.js"></script>
 
     <script>
       (function loadAttractionsMap() {
-        const mapboxToken = window.MAPBOX_ACCESS_TOKEN;
+        const mapboxToken =
+          (window.__ENV__ && window.__ENV__.MAPBOX_ACCESS_TOKEN) ||
+          (typeof process !== "undefined" &&
+            process.env &&
+            process.env.MAPBOX_ACCESS_TOKEN) ||
+          window.MAPBOX_ACCESS_TOKEN;
         const mapElement = document.getElementById("map");
 
         if (!mapboxToken) {
-          console.error("Mapbox token missing. Add scripts/mapbox-config.js from scripts/mapbox-config.example.js.");
+          console.error("Mapbox token missing. Set MAPBOX_ACCESS_TOKEN in the environment.");
           if (mapElement) {
-            mapElement.innerHTML = "<p class='text-center p-4 mb-0'>Map unavailable: add a Mapbox token in <code>scripts/mapbox-config.js</code>.</p>";
+            mapElement.innerHTML = "<p class='text-center p-4 mb-0'>Map unavailable: set <code>MAPBOX_ACCESS_TOKEN</code> in the environment.</p>";
           }
           return;
         }
