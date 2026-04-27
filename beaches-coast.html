@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>AOTEAROA | Beaches & Coast</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/normalize.css">
+  <style>
+    :root {
+      --sea: #0e7490;
+      --sand: #f8fafc;
+      --ink: #0f172a;
+      --card: #ffffff;
+    }
+
+    body {
+      color: var(--ink);
+      background: linear-gradient(180deg, #ecfeff 0%, #f8fafc 35%, #ffffff 100%);
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding-top: 70px;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(14, 116, 144, 0.8), rgba(15, 23, 42, 0.75)),
+        url("https://images.unsplash.com/photo-1513553404607-988d4c30c9c1?auto=format&fit=crop&w=1500&q=80") center/cover;
+      color: #fff;
+      padding: 4rem 1.25rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 6vw, 3.2rem);
+      margin-bottom: 0.75rem;
+    }
+
+    .hero p {
+      margin: 0 auto;
+      max-width: 740px;
+      font-size: 1.05rem;
+    }
+
+    .content-wrap {
+      max-width: 1100px;
+      margin: 2rem auto 3rem;
+      padding: 0 1rem;
+      display: grid;
+      gap: 1.2rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .info-card {
+      background: var(--card);
+      border-radius: 14px;
+      box-shadow: 0 8px 20px rgba(2, 8, 23, 0.08);
+      padding: 1.2rem;
+      border: 1px solid #e2e8f0;
+    }
+
+    .info-card h2 {
+      color: var(--sea);
+      font-size: 1.25rem;
+      margin-bottom: 0.65rem;
+    }
+
+    .tip-list {
+      padding-left: 1.1rem;
+      margin-bottom: 0;
+    }
+
+    .attribution {
+      background: #e0f2fe;
+      border-left: 4px solid var(--sea);
+      margin: 0 auto 3rem;
+      max-width: 1100px;
+      padding: 0.9rem 1rem;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 576px) {
+      .hero {
+        padding: 3rem 1rem;
+      }
+
+      .info-card {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html"><img src="images/1280px-NZ_fern_flag.png" width="100" height="45"
+          class="d-inline-block align-center" alt="NZ fern logo"></a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="nav navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="attractions.html">Main Attractions & Locations</a></li>
+        <li class="nav-item"><a class="nav-link" href="history.html">New Zealands History</a></li>
+        <li class="nav-item"><a class="nav-link" href="events.html">Coming Events</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item active"><a class="nav-link" href="beaches-coast.html">Beaches & Coast</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <h1>Explore New Zealand's Beaches & Coast</h1>
+    <p>
+      From wild surf beaches and dramatic cliffs to sheltered bays for kayaking and family swims,
+      New Zealand's coastline offers many ways to enjoy the sea.
+    </p>
+  </header>
+
+  <main class="content-wrap" aria-label="Beaches and coast highlights">
+    <section class="info-card">
+      <h2>Coastline Variety</h2>
+      <p>
+        Aotearoa has a remarkably diverse shoreline. You can move from rugged west-coast waves to calm
+        east-coast coves in a short drive, with black-sand and golden-sand beaches both part of the experience.
+      </p>
+    </section>
+
+    <section class="info-card">
+      <h2>What to Do by the Water</h2>
+      <ul class="tip-list">
+        <li>Swim and relax at sheltered bays in warmer months.</li>
+        <li>Try surfing, paddleboarding, sailing, or sea kayaking.</li>
+        <li>Walk coastal tracks for viewpoints, wildlife, and photography.</li>
+        <li>Visit small beach towns for seafood, cafes, and local culture.</li>
+      </ul>
+    </section>
+
+    <section class="info-card">
+      <h2>Regional Highlights</h2>
+      <p>
+        Popular areas include Northland, the Coromandel, Bay of Plenty, and the upper South Island.
+        Each region has its own character, from geothermal seaside settings to long dune-backed beaches.
+      </p>
+    </section>
+
+    <section class="info-card">
+      <h2>Safety Notes</h2>
+      <p>
+        Conditions can change quickly. Always check signs, swim between flags where lifeguards are present,
+        and pay attention to tides and weather before heading out on or into the water.
+      </p>
+    </section>
+  </main>
+
+  <section class="attribution" aria-label="Source attribution">
+    <strong>Attribution:</strong> This page adapts and paraphrases tourism information from
+    <a href="https://www.newzealand.com/nz/beaches-and-coast/" target="_blank" rel="noopener noreferrer">100% Pure New Zealand — Beaches & Coast</a>.
+  </section>
+
+  <footer class="page-footer font-small bg-dark text-light">
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+      <a class="text-light" href="https://www.facebook.com/luke.gilchrist.35">LUKE PONGA</a>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
