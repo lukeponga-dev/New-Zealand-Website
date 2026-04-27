@@ -1,2 +1,5 @@
 # Local secrets
 scripts/mapbox-config.js
+
+# Local Netlify folder
+.netlify
