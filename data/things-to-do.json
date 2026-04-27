@@ -1,0 +1,104 @@
+{
+  "source": "https://www.newzealand.com/nz/things-to-do",
+  "title": "Things to do in New Zealand",
+  "summary": "A curated overview of New Zealand attractions, activities, and travel themes across outdoor adventures, culture, relaxation, and featured destinations.",
+  "categories": [
+    {
+      "id": "outdoor_adventures",
+      "name": "Outdoor Adventures",
+      "description": "Walking, hiking, wildlife encounters, and iconic landscapes across Aotearoa.",
+      "highlights": [
+        "Walking and hiking trails nationwide",
+        "Short walks and multi-day treks",
+        "Destinations: Stewart Island/Rakiura, Fiordland, Tongariro National Park",
+        "Wildlife: rare birds, dolphins, whales"
+      ],
+      "tags": ["hiking", "trekking", "wildlife", "national-parks"]
+    },
+    {
+      "id": "relax",
+      "name": "Relax",
+      "description": "Laid-back Kiwi lifestyle experiences including beaches, hot pools, and shopping.",
+      "highlights": [
+        "Beaches for sunbathing",
+        "Hot pools",
+        "Shopping for quirky souvenirs"
+      ],
+      "tags": ["beaches", "hot-pools", "shopping"]
+    },
+    {
+      "id": "culture",
+      "name": "Culture",
+      "description": "Kiwi culture, Te Reo Māori, local interactions, and guided tours.",
+      "highlights": [
+        "Practise Te Reo Māori",
+        "Chat with local café owners",
+        "Take guided tours"
+      ],
+      "tags": ["maori-culture", "tours", "local-experiences"]
+    },
+    {
+      "id": "food_and_drink",
+      "name": "Food & Drink",
+      "description": "Local cuisine, vineyards, and culinary experiences.",
+      "tags": ["food", "wine", "dining"]
+    },
+    {
+      "id": "middle_earth",
+      "name": "Home of Middle-earth™",
+      "description": "Experiences connected to The Lord of the Rings and The Hobbit films.",
+      "tags": ["middle-earth", "film-locations"]
+    },
+    {
+      "id": "events",
+      "name": "Events",
+      "description": "Events and happenings across New Zealand.",
+      "tags": ["events"]
+    }
+  ],
+  "featured_destinations": [
+    {
+      "name": "Rotorua",
+      "context": "Featured in Minecraft collaboration"
+    },
+    {
+      "name": "Abel Tasman National Park",
+      "context": "Featured in Minecraft collaboration"
+    },
+    {
+      "name": "Lake Tekapo / Takapō",
+      "context": "Featured in Minecraft collaboration"
+    },
+    {
+      "name": "Patea",
+      "context": "Featured in Minecraft collaboration"
+    },
+    {
+      "name": "Doubtful Sound",
+      "context": "Featured in Minecraft collaboration"
+    },
+    {
+      "name": "Waitomo Caves",
+      "context": "Featured in Minecraft collaboration"
+    }
+  ],
+  "holiday_types": [
+    "Backpacker",
+    "Luxury lodges",
+    "Multi-day tours",
+    "Tour packages"
+  ],
+  "navigation": {
+    "social": ["X", "Instagram", "Facebook", "YouTube"],
+    "support": [
+      "Help",
+      "FAQs",
+      "Adding your business",
+      "Linking to newzealand.com",
+      "Terms of use",
+      "Privacy Policy",
+      "Cookies"
+    ]
+  },
+  "last_updated": "2025"
+}
