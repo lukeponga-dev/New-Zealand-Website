@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AOTEAROA | Beaches & Coast Guide</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <style>
+    :root {
+      --bg: #f4f8fb;
+      --panel: #ffffff;
+      --ink: #10233d;
+      --accent: #1e6f8f;
+      --muted: #4d5d6d;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    .hero {
+      padding: 4rem 1.25rem 3rem;
+      background: linear-gradient(135deg, rgba(6, 44, 71, 0.88), rgba(17, 96, 120, 0.8)),
+        url("images/coromandel.jpg") center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0.75rem auto 0;
+      font-size: 1.08rem;
+    }
+
+    .wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.5rem 1rem 2.5rem;
+    }
+
+    .intro,
+    .tips,
+    .source {
+      background: var(--panel);
+      border-radius: 12px;
+      padding: 1.25rem;
+      box-shadow: 0 4px 14px rgba(8, 25, 40, 0.08);
+      margin-bottom: 1.25rem;
+    }
+
+    .regions {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      margin-bottom: 1.25rem;
+    }
+
+    .region {
+      background: var(--panel);
+      border-radius: 12px;
+      padding: 1.15rem;
+      box-shadow: 0 4px 14px rgba(8, 25, 40, 0.08);
+    }
+
+    h2,
+    h3 {
+      margin-top: 0;
+      color: var(--accent);
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1.1rem;
+    }
+
+    .source a {
+      color: var(--accent);
+      font-weight: 700;
+      word-break: break-word;
+    }
+
+    .home-link {
+      display: inline-block;
+      margin-top: 0.9rem;
+      text-decoration: none;
+      padding: 0.6rem 0.85rem;
+      border-radius: 8px;
+      background: #e6f2f7;
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        padding-top: 3.1rem;
+      }
+
+      .wrapper {
+        padding-top: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="hero">
+    <h1>Beaches & Coast of Aotearoa New Zealand</h1>
+    <p>
+      New Zealand's shoreline gives you everything from quiet coves to energetic surf beaches.
+      This page is a visitor-friendly summary inspired by the official tourism guide.
+    </p>
+  </header>
+
+  <main class="wrapper">
+    <section class="intro">
+      <h2>Why this coast stands out</h2>
+      <p>
+        Across both islands, the coast changes quickly—golden bays, black-sand surf breaks, rocky
+        headlands, and sheltered spots for relaxed swimming. With so much shoreline, it's usually
+        easy to find a beach that feels peaceful even in popular regions.
+      </p>
+    </section>
+
+    <section class="regions">
+      <article class="region">
+        <h3>North Island highlights</h3>
+        <ul>
+          <li><strong>Cathedral Cove:</strong> dramatic coastal arch and clear water views.</li>
+          <li><strong>Ninety Mile Beach:</strong> a long wild coast in the Far North.</li>
+          <li><strong>Hot Water Beach:</strong> naturally heated sand at low tide.</li>
+          <li><strong>Piha & Raglan:</strong> iconic west-coast surf culture and bold scenery.</li>
+          <li><strong>Mount Maunganui & Ōhope:</strong> easy-going beach towns for family trips.</li>
+        </ul>
+      </article>
+
+      <article class="region">
+        <h3>South Island highlights</h3>
+        <ul>
+          <li><strong>Tunnel Beach Walkway:</strong> cliffside tracks and ocean viewpoints.</li>
+          <li><strong>St Clair & Oreti:</strong> broad beaches with room to stretch out.</li>
+          <li><strong>Moeraki Boulders:</strong> unusual spherical rocks by the sea.</li>
+          <li><strong>Golden Bay:</strong> calm water, warm light, and laid-back summer energy.</li>
+          <li><strong>Coastwide variety:</strong> choose remote nature or active water adventures.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="tips">
+      <h2>Simple planning tips</h2>
+      <ul>
+        <li>Bring sun protection year-round—the UV can be strong even when it's cool.</li>
+        <li>Check tide and surf conditions before swimming or exploring rocky areas.</li>
+        <li>Pack for quick weather changes, especially on exposed coastlines.</li>
+      </ul>
+      <a class="home-link" href="index.html">← Back to Home</a>
+    </section>
+
+    <section class="source">
+      <h2>Attribution</h2>
+      <p>
+        This page paraphrases and adapts information from Tourism New Zealand's
+        <em>"Beaches & Coast in New Zealand"</em> page.
+      </p>
+      <p>
+        Source: <a href="https://www.newzealand.com/nz/beaches-and-coast/"
+          target="_blank" rel="noopener noreferrer">https://www.newzealand.com/nz/beaches-and-coast/</a>
+      </p>
+    </section>
+  </main>
+</body>
+
+</html>
