@@ -788,11 +788,6 @@ iframe {
     padding: 2.25rem;
   }
 
-  .home-v2 .featured-grid .row,
-  .home-v2 .activities-section .row {
-    row-gap: 1.25rem;
-  }
-
   .home-v2 .experience-card {
     transition: transform 0.25s ease, box-shadow 0.25s ease;
   }
@@ -802,11 +797,11 @@ iframe {
     box-shadow: 0 16px 30px rgba(4, 24, 44, 0.16);
   }
 
-  .home-v2 .activity-tile {
+  .home-v2 .activities-section .activity-tile {
     padding: 1.25rem;
   }
 
   .home-v2 .home-footer .container {
-    max-width: 1200px;
+    max-width: 1140px;
   }
 }
