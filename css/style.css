@@ -767,3 +767,159 @@ iframe {
   border: 3px solid black;
   margin: 20px auto;
 }
+
+/* DESKTOP LAYOUT TUNING */
+@media (min-width: 1200px) {
+  .home-v2 .hero-banner {
+    min-height: 88vh;
+  }
+
+  .home-v2 .hero-content {
+    max-width: 1140px;
+    padding-top: 90px;
+  }
+
+  .home-v2 .hero-subtitle {
+    max-width: 680px;
+    font-size: 1.3rem;
+  }
+
+  .home-v2 .search-shell {
+    padding: 2.25rem;
+  }
+
+  .home-v2 .experience-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .home-v2 .experience-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 30px rgba(4, 24, 44, 0.16);
+  }
+
+  .home-v2 .activities-section .activity-tile {
+    padding: 1.25rem;
+  }
+
+  .home-v2 .home-footer .container {
+    max-width: 1140px;
+  }
+}
+
+/* CROSS-DEVICE RESPONSIVE UX TUNING */
+.home-v2 img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1199.98px) {
+  .home-v2 .hero-banner {
+    min-height: 72vh;
+  }
+
+  .home-v2 .hero-content {
+    padding-top: 84px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .home-v2 .hero-content h1 {
+    font-size: clamp(2rem, 6vw, 3rem);
+  }
+
+  .home-v2 .hero-subtitle {
+    font-size: 1.05rem;
+  }
+
+  .home-v2 .hero-actions .btn {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .home-v2 .trip-search {
+    margin-top: -24px;
+  }
+
+  .home-v2 .search-shell {
+    padding: 1.5rem;
+  }
+
+  .home-v2 .facts-strip .col-md-3 {
+    margin-bottom: 1rem;
+  }
+
+  #map {
+    height: 420px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .home-v2 .hero-banner {
+    min-height: 62vh;
+  }
+
+  .home-v2 .hero-content {
+    padding-top: 76px;
+  }
+
+  .home-v2 .hero-kicker {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+  }
+
+  .home-v2 .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .home-v2 .search-shell h2 {
+    font-size: 1.3rem;
+  }
+
+  .home-v2 .search-shell {
+    border-radius: 10px;
+    padding: 1.25rem;
+  }
+
+  .home-v2 .experience-card img {
+    height: 200px;
+  }
+
+  .home-v2 #events th,
+  .home-v2 #events td {
+    font-size: 0.92rem;
+  }
+
+  #map {
+    height: 320px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .home-v2 .hero-content {
+    padding-top: 70px;
+  }
+
+  .home-v2 .hero-content h1 {
+    font-size: 1.85rem;
+  }
+
+  .home-v2 .trip-search {
+    margin-top: -12px;
+  }
+
+  .home-v2 .activities-section .activity-tile,
+  .home-v2 .experience-body,
+  .home-v2 #events .event-card {
+    padding: 0.9rem;
+  }
+
+  .home-v2 .home-footer .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  #map {
+    height: 280px;
+  }
+}
